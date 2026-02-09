@@ -1,0 +1,14 @@
+<% if(groupArray) { %>
+  <% groupArray.forEach(animal => { %>
+    <div>
+      <h2><%= animal.family %></h2>
+      <h3><%= animal.description</h3> %></h3>
+      <img src="<%= animal.image %>" alt="<% animal.name %>">
+    </div>
+  <%})%>
+<%} else { %>
+  <div>
+    <h2>Welcome</h2>
+    <h3>Enjoy your trip to our zoo.</h3>
+  </div>
+<%}%>
