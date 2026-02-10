@@ -105,3 +105,22 @@ export const reptilesArray = [
     weight: "20kg"
   }
 ]
+
+export const teamArray = [
+  {
+    name: "Callum Jones",
+    image: "../images/team/callum.png",
+  },
+  {
+    name: "Claudia Pereira Carion",
+    image: "../images/team/claudia.png",
+  },
+  {
+    name: "Dobeen Kim",
+    image: "../images/team/dobeen.png",
+  },
+  {
+    name: "Michelle Sarmiento",
+    image: "../images/team/michelle.png",
+  }
+]
