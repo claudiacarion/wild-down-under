@@ -1,7 +1,31 @@
-  <% groupArray.forEach(animal => { %>
+<% if(locals.groupName) { %>
+  <% animals.forEach(animal => { %>
     <div>
-      <h2><%= animal.family %></h2>
-      <h3><%= animal.name</h3> %></h3>
-      <img src="<%= animal.image %>" alt="<% animal.name %>">
+      <h2><%= animal.name %></h2>
+      <h3><%= animal.group %></h3>
+    </div>
+    <div>
+      <p><%= animal.description %></p>
+      <p>Diet: <%= animal.diet %></p>
+      <p>Lifespan: <%= animal.lifespan %></p>
+      <p>Location: <%= animal.location %></p>
+      <p>Length: <%= animal.length %></p>
+      <p>Weight: <%= animal.weight %></p>
+    </div>
+    <img src="<%= animal.image %>" alt="<%= animal.name %>">
+  </div>
+<%})%>
+<%} else if(locals.teamName) { %>
+  <% team.forEach(member => { %>
+    <div>
+      <h2><%= member.name %></h2>
+    </div>
+    <div>
+      <img src="<%= member.image %>" alt="<%= member.name %>">
+      <p><%= member.specialAbility %></p>
+      <p><%= member.habitat %></p>
+      <p><%= member.github %></p>
+      <p><%= member.linkedIn %></p>
     </div>
   <%})%>
+<%}%>

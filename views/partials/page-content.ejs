@@ -1,14 +1,16 @@
-<% if(groupArray) { %>
-  <% groupArray.forEach(animal => { %>
+<% if(locals.groupName) { %>
     <div>
-      <h2><%= animal.family %></h2>
-      <h3><%= animal.description</h3> %></h3>
-      <img src="<%= animal.image %>" alt="<% animal.name %>">
+      <h2><%= groupName %></h2>
+      <h3><%= groupDescription %></h3>
     </div>
-  <%})%>
-<%} else { %>
+<%} else if(locals.teamName) { %>
   <div>
-    <h2>Welcome</h2>
-    <h3>Enjoy your trip to our zoo.</h3>
+    <h2><%= teamName %></h2>
+    <h3><%= groupDescription %></h3>
+  </div>
+<%} else {%>
+  <div>
+    <h2>Welcome to our zoo!</h2>
+    <h3>G’day and welcome! You’ve just stepped into our small but mighty Australian zoo — home to curious critters, friendly faces, and plenty of animal magic. Enjoy the adventure!</h3>
   </div>
 <%}%>

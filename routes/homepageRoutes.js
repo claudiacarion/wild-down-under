@@ -1,9 +1,12 @@
 import express from 'express';
+import * as path from "path";
 
 const router = express.Router();
+const __dirname = path.resolve();
+
 
 router.get('/',(req,res)=>{
-res.send('<h1>This is the homepage</h1>')
+  res.render(path.join(__dirname, "/views/pages/page"))
 })
 
 export default router;
