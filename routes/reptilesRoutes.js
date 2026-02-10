@@ -1,19 +1,27 @@
 import express from 'express';
+import * as path from "path";
+import { reptilesArray } from '../data/data.js';
 
 const router = express.Router();
+const __dirname = path.resolve();
 
 router.get('/', (req, res) => {
-  res.send('<h1>This is the reptiles page</h1>')
+  res.render(path.join(__dirname, "/views/pages/page.ejs"),
+  {
+    groupArray: reptilesArray,
+    groupName: "Reptiles",
+    groupDescription: ""
+  })
 });
 
-router.get('/frillneckedlizard', (req, res) => {
-  res.send('<h2>Frill Necked Lizard</h2>')
-})
-router.get('/hawksbillturtle', (req, res) => {
-  res.send('<h2>Hawksbill turtle</h2>')
-})
-router.get('/perentie', (req, res) => {
-  res.send('<h2>Perentie</h2>')
+router.get('/:names', (req, res) => {
+  const { name } = req.params;
+
+  const selectedAnimal = reptilesArray.find(animal => animal.slug === name);
+  res.render(path.join(__dirname, "/views/pages/animals.ejs"),
+  {
+    animals: [selectedAnimal]
+  })
 })
 
 export default router;

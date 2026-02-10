@@ -1,0 +1,15 @@
+<% animals.forEach(animal => { %>
+  <div>
+    <h2><%= animal.name %></h2>
+    <h3><%= animal.group %></h3>
+    <div>
+      <p><%= animal.description %></p>
+      <p>Diet: <%= animal.diet %></p>
+      <p>Lifespan: <%= animal.lifespan %></p>
+      <p>Location: <%= animal.location %></p>
+      <p>Length: <%= animal.length %></p>
+      <p>Weight: <%= animal.weight %></p>
+    </div>
+    <img src="<%= animal.image %>" alt="<%= animal.name %>">
+  </div>
+<%})%>
