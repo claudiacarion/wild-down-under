@@ -6,7 +6,7 @@ const router = express.Router();
 const __dirname = path.resolve();
 
 router.get('/', (req, res) => {
-  res.render(path.join(__dirname, "/views/pages/page.ejs"),
+  res.render(path.join(__dirname, "/views/pages/page"),
   {
     groupArray: teamArray,
     teamName: "Zoo Keepers",
@@ -24,7 +24,7 @@ router.get('/:slug', (req, res) => {
     return res.status(404).send("Team member not found");
   }
 
-  res.render(path.join(__dirname, "/views/pages/animals.ejs"),
+  res.render(path.join(__dirname, "/views/pages/animals"),
   {
     teamName: "Zoo Keepers",
     team: [selectedMember]

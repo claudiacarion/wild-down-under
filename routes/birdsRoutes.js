@@ -6,7 +6,7 @@ const router = express.Router();
 const __dirname = path.resolve();
 
 router.get('/', (req, res) => {
-  res.render(path.join(__dirname, "/views/pages/page.ejs"),
+  res.render(path.join(__dirname, "/views/pages/page"),
   {
     groupArray: birdsArray,
     groupName: "Birds",
@@ -23,7 +23,7 @@ router.get('/:slug', (req, res) => {
     return res.status(404).send("Animal not found");
   }
 
-  res.render(path.join(__dirname, "/views/pages/animals.ejs"),
+  res.render(path.join(__dirname, "/views/pages/animals"),
   {
     groupName: "Birds",
     animals: [selectedAnimal]

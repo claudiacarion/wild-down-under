@@ -6,7 +6,7 @@ const __dirname = path.resolve();
 
 
 router.get('/',(req,res)=>{
-  res.render(path.join(__dirname, "/views/pages/page.ejs"))
+  res.render(path.join(__dirname, "/views/pages/page"))
 })
 
 export default router;
