@@ -15,12 +15,18 @@ router.get('/', (req, res) => {
   })
 });
 
-router.get('/:names', (req, res) => {
-  const { name } = req.params;
+router.get('/:slug', (req, res) => {
+  const { slug } = req.params;
 
-  const selectedMember = teamArray.find(team => team.slug === name);
+  const selectedMember = teamArray.find(team => team.slug === slug);
+  
+  if (!selectedMember) {
+    return res.status(404).send("Team member not found");
+  }
+
   res.render(path.join(__dirname, "/views/pages/animals.ejs"),
   {
+    teamName: "Zoo Keepers",
     team: [selectedMember]
   })
 })

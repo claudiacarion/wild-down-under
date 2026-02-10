@@ -10,16 +10,22 @@ router.get('/', (req, res) => {
   {
     groupArray: reptilesArray,
     groupName: "Reptiles",
-    groupDescription: ""
+    groupDescription: "Cold-blooded cool customers — masters of disguise, drama, and deep-sea chill."
   })
 });
 
-router.get('/:names', (req, res) => {
-  const { name } = req.params;
+router.get('/:slug', (req, res) => {
+  const { slug } = req.params;
 
-  const selectedAnimal = reptilesArray.find(animal => animal.slug === name);
+  const selectedAnimal = reptilesArray.find(animal => animal.slug === slug);
+
+  if (!selectedAnimal) {
+    return res.status(404).send("Animal not found");
+  }
+
   res.render(path.join(__dirname, "/views/pages/animals.ejs"),
   {
+    groupName: "Reptiles",
     animals: [selectedAnimal]
   })
 })
