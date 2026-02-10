@@ -18,10 +18,10 @@ router.get('/', (req, res) => {
 router.get('/:names', (req, res) => {
   const { name } = req.params;
 
-  const selectedMember = teamArray.find(member => member.slug === name);
+  const selectedMember = teamArray.find(team => team.slug === name);
   res.render(path.join(__dirname, "/views/pages/animals.ejs"),
   {
-    animals: [selectedMember]
+    team: [selectedMember]
   })
 })
 
