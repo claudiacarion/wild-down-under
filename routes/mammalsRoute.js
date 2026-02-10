@@ -1,7 +1,6 @@
 import express from 'express';
 import * as path from "path";
 import { mammalsArray } from '../data/data.js';
-import { group } from 'console';
 
 const router = express.Router();
 const __dirname = path.resolve();

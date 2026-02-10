@@ -82,7 +82,7 @@ export const reptilesArray = [
     description:
       "When this unique creature feels threatened, it rises on its hind legs, opens its yellow-coloured mouth, unfurls the colorful, pleated skin flap that encircles its head, and hisses. If an attacker is unintimidated by these antics, the lizard simply turns tail, mouth and frill open, and bolts, legs splaying left and right. It continues its deliberate run without stopping or looking back until it reaches the safety of a tree.",
     diet: "Small insects and spiders",
-    group: "Reptile",
+    group: "Reptiles",
     image: "../images/reptiles/frill_necked.png",
     location: "Northern Australia",
     lifespan: "20 years",
@@ -117,6 +117,7 @@ export const reptilesArray = [
 
 export const teamArray = [
   {
+    slug: "callumjones",
     name: "Callum Jones",
     github: "https://github.com/Callum-Jones230893",
     group: "Team",
@@ -126,6 +127,7 @@ export const teamArray = [
     specialAbility: "Fixes things while saying, 'Wait… oh, never mind, got it!'",
   },
   {
+    slug: "claudiapereiracarion",
     name: "Claudia Pereira Carion",
     github: "https://github.com/claudiacarion",
     group: "Team",
@@ -135,6 +137,7 @@ export const teamArray = [
     specialAbility: "Balances seriousness with silliness",
   },
   {
+    slug: "dobeenkim",
     name: "Dobeen Kim",
     github: "https://github.com/DobeenKim",
     group: "Team",
@@ -144,6 +147,7 @@ export const teamArray = [
     specialAbility: "Brings calm energy to stressful moments",
   },
   {
+    slug: "michellesarmiento",
     name: "Michelle Sarmiento",
     github: "https://github.com/themichellesarmiento",
     group: "Team",
