@@ -118,22 +118,38 @@ export const reptilesArray = [
 export const teamArray = [
   {
     name: "Callum Jones",
+    github: "https://github.com/Callum-Jones230893",
     group: "Team",
+    habitat: "In dark mode, headphones on, fully in the zone",
     image: "../images/team/callum.png",
+    linkedIn: "https://www.linkedin.com/in/callum-jones-760b4720b/",
+    specialAbility: "Fixes things while saying, 'Wait… oh, never mind, got it!'",
   },
   {
     name: "Claudia Pereira Carion",
+    github: "https://github.com/claudiacarion",
     group: "Team",
+    habitat: "Surrounded by notebooks, planners, and color-coded schedules",
     image: "../images/team/claudia.png",
+    linkedIn: "https://linkedin.com/in/claudia-pereira-carion",
+    specialAbility: "Balances seriousness with silliness",
   },
   {
     name: "Dobeen Kim",
+    github: "https://github.com/DobeenKim",
     group: "Team",
+    habitat: "In a quiet corner with headphones and perfect posture",
     image: "../images/team/dobeen.png",
+    linkedIn: "https://www.linkedin.com/in/dobeen-kim/",
+    specialAbility: "Brings calm energy to stressful moments",
   },
   {
     name: "Michelle Sarmiento",
+    github: "https://github.com/themichellesarmiento",
     group: "Team",
+    habitat: "At the center of brainstorming sessions",
     image: "../images/team/michelle.png",
+    linkedIn: "https://www.linkedin.com/in/michelleangelasarmiento/",
+    specialAbility: "Makes complicated tasks feel strangely manageable",
   },
 ];
