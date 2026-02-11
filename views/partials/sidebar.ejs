@@ -4,12 +4,12 @@
 </div>
 <aside class="sidebar">
 
-  <% if (locals.groupArray) { %>
+  <% if (locals.animalArray) { %>
     <h3>
       <%= groupName %>
     </h3>
     <ul>
-      <% groupArray.forEach(animal=> { %>
+      <% animalArray.forEach(animal=> { %>
         <li>
           <a href="/<%=animal.group.toLowerCase()%>/<%= animal.slug%>">
             <%= animal.name %>

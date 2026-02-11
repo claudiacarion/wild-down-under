@@ -8,7 +8,7 @@ const __dirname = path.resolve();
 router.get('/', (req, res) => {
   res.render(path.join(__dirname, "/views/pages/page"),
     {
-      birds: birdsArray
+      animalArray: birdsArray
     })
 });
 
