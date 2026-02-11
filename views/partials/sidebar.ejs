@@ -1,4 +1,4 @@
-<div class="sidebar-toggle-container">
+<div>
   <h2>Animals</h2>
   <button class="sidebar__arrow">&#9662;</button>
 </div>
@@ -9,7 +9,7 @@
     <ul>
       <% mammals.forEach(animal=> { %>
         <li>
-              <a href="/mammals/<%= animal.name.toLowerCase().replace(/\s+/g, '') %>">
+              <a href="/mammals/<%= animal.slug%>">
                 <%= animal.name %>
               </a>
         </li>
@@ -22,7 +22,7 @@
         <ul>
           <% reptiles.forEach(animal=> { %>
             <li>
-              <a href="/reptiles/<%= animal.name.toLowerCase().replace(/\s+/g, '') %>">
+              <a href="/reptiles/<%= animal.slug %>">
                 <%= animal.name %>
               </a>
             </li>
@@ -35,7 +35,7 @@
             <ul>
               <% birds.forEach(animal=> { %>
                 <li>
-                  <a href="/birds/<%= animal.name.toLowerCase().replace(/\s+/g, '') %>">
+                  <a href="/birds/<%= animal.slug %>">
                     <%= animal.name %>
                   </a>
                 </li>
@@ -48,7 +48,7 @@
                 <ul>
                   <% team.forEach(member=> { %>
                     <li>
-                      <a href="/aboutus/<%= member.name.toLowerCase().replace(/\s+/g, '') %>">
+                      <a href="/aboutus/<%= member.slug%>">
                         <%= member.name %>
                       </a>
                     </li>
