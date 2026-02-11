@@ -1,0 +1,59 @@
+<div class="sidebar-toggle-container">
+  <h2>Animals</h2>
+  <button class="sidebar__arrow">&#9662;</button>
+</div>
+<aside class="sidebar">
+ 
+  <% if (locals.mammals) { %>
+    <h3>Mammals</h3>
+    <ul>
+      <% mammals.forEach(animal=> { %>
+        <li>
+              <a href="/mammals/<%= animal.name.toLowerCase().replace(/\s+/g, '') %>">
+                <%= animal.name %>
+              </a>
+        </li>
+        <% }) %>
+    </ul>
+    <% } %>
+ 
+      <% if (locals.reptiles) { %>
+        <h3>Reptiles</h3>
+        <ul>
+          <% reptiles.forEach(animal=> { %>
+            <li>
+              <a href="/reptiles/<%= animal.name.toLowerCase().replace(/\s+/g, '') %>">
+                <%= animal.name %>
+              </a>
+            </li>
+            <% }) %>
+        </ul>
+        <% } %>
+ 
+        <% if (locals.birds) { %>
+            <h3>Birds</h3>
+            <ul>
+              <% birds.forEach(animal=> { %>
+                <li>
+                  <a href="/birds/<%= animal.name.toLowerCase().replace(/\s+/g, '') %>">
+                    <%= animal.name %>
+                  </a>
+                </li>
+                <% }) %>
+            </ul>
+        <% } %>
+ 
+        <% if (locals.team) { %>
+                <h3>Zoo Keepers</h3>
+                <ul>
+                  <% team.forEach(member=> { %>
+                    <li>
+                      <a href="/aboutus/<%= member.name.toLowerCase().replace(/\s+/g, '') %>">
+                        <%= member.name %>
+                      </a>
+                    </li>
+                    <% }) %>
+                </ul>
+        <% } %>
+ 
+</aside>
