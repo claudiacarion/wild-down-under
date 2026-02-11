@@ -1,9 +1,14 @@
 import express from 'express';
+import * as path from "path";
+import { teamArray } from '../data/data.js';
 
 const router = express.Router();
+const __dirname = path.resolve();
 
 router.get('/',(req,res)=>{
-res.send('<h1>This is the about us page</h1>')
-})
+  res.render(path.join(__dirname, "/views/pages/page"),{
+   team: teamArray
+  })
+});
 
 export default router;
