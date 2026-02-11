@@ -3,57 +3,53 @@
   <button class="sidebar__arrow">&#9662;</button>
 </div>
 <aside class="sidebar">
- 
-  <% if (locals.mammals) { %>
-    <h3>Mammals</h3>
+
+  <% if (locals.groupArray) { %>
+    <h3>
+      <%= groupName %>
+    </h3>
     <ul>
-      <% mammals.forEach(animal=> { %>
+      <% groupArray.forEach(animal=> { %>
         <li>
-              <a href="/mammals/<%= animal.slug%>">
-                <%= animal.name %>
-              </a>
+          <a href="/<%=animal.group.toLowerCase()%>/<%= animal.slug%>">
+            <%= animal.name %>
+          </a>
         </li>
         <% }) %>
     </ul>
     <% } %>
- 
-      <% if (locals.reptiles) { %>
-        <h3>Reptiles</h3>
+
+      <% if (locals.teamArray) { %>
+        <h3>
+          <%= teamName %>
+        </h3>
         <ul>
-          <% reptiles.forEach(animal=> { %>
+          <% teamArray.forEach(member=> { %>
             <li>
-              <a href="/reptiles/<%= animal.slug %>">
-                <%= animal.name %>
+              <a href="/aboutus/<%= member.slug%>">
+                <%= member.name %>
               </a>
             </li>
             <% }) %>
         </ul>
         <% } %>
- 
-        <% if (locals.birds) { %>
-            <h3>Birds</h3>
+
+          <% if (locals.allAnimalsArray) { %>
             <ul>
-              <% birds.forEach(animal=> { %>
-                <li>
-                  <a href="/birds/<%= animal.slug %>">
-                    <%= animal.name %>
-                  </a>
-                </li>
-                <% }) %>
-            </ul>
-        <% } %>
- 
-        <% if (locals.team) { %>
-                <h3>Zoo Keepers</h3>
+              <% allAnimalsArray.forEach(animal=> { %>
+                <h3>
+                  <%= animal.name %>
+                </h3>
                 <ul>
-                  <% team.forEach(member=> { %>
+                  <% animal.animals.forEach(a=>{%>
                     <li>
-                      <a href="/aboutus/<%= member.slug%>">
-                        <%= member.name %>
+                      <a href="/<%= a.slug%>">
+                        <%= a.name %>
                       </a>
                     </li>
-                    <% }) %>
+                    <%}) %>
+                      <% }) %>
                 </ul>
-        <% } %>
- 
+                <% } %>
+
 </aside>
