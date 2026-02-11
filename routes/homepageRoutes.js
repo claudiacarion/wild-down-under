@@ -1,8 +1,6 @@
 import express from 'express';
 import * as path from "path";
-import { birdsArray } from '../data/data.js';
-import { mammalsArray } from '../data/data.js';
-import { reptilesArray } from '../data/data.js';
+import { birdsArray, mammalsArray, reptilesArray } from '../data/data.js';
 
 const router = express.Router();
 const __dirname = path.resolve();
