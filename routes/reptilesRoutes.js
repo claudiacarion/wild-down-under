@@ -1,19 +1,33 @@
 import express from 'express';
+import * as path from "path";
+import { reptilesArray } from '../data/data.js';
 
 const router = express.Router();
+const __dirname = path.resolve();
 
 router.get('/', (req, res) => {
-  res.send('<h1>This is the reptiles page</h1>')
+  res.render(path.join(__dirname, "/views/pages/page"),
+  {
+    groupArray: reptilesArray,
+    groupName: "Reptiles",
+    groupDescription: "Cold-blooded cool customers — masters of disguise, drama, and deep-sea chill."
+  })
 });
 
-router.get('/frillneckedlizard', (req, res) => {
-  res.send('<h2>Frill Necked Lizard</h2>')
-})
-router.get('/hawksbillturtle', (req, res) => {
-  res.send('<h2>Hawksbill turtle</h2>')
-})
-router.get('/perentie', (req, res) => {
-  res.send('<h2>Perentie</h2>')
+router.get('/:slug', (req, res) => {
+  const { slug } = req.params;
+
+  const selectedAnimal = reptilesArray.find(animal => animal.slug === slug);
+
+  if (!selectedAnimal) {
+    return res.status(404).send("Animal not found");
+  }
+
+  res.render(path.join(__dirname, "/views/pages/animals"),
+  {
+    groupName: "Reptiles",
+    animals: [selectedAnimal]
+  })
 })
 
 export default router;
