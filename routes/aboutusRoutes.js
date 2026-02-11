@@ -1,8 +1,7 @@
 import express from 'express';
 import * as path from "path";
 import { teamArray } from '../data/data.js';
-import * as path from "path";
-import { teamArray } from '../data/data.js';
+
 
 const router = express.Router();
 const __dirname = path.resolve();
