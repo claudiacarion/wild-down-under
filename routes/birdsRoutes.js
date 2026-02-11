@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
   {
     groupArray: birdsArray,
     groupName: "Birds",
-    groupDescription: "Meet our feathered superstars — part punk rock, part comedy act, all Aussie attitude!"
+    groupDescription: "Meet our feathered superstars — part punk rock, part comedy act, all Aussie attitude!",
+    birds: birdsArray
   })
 });
 

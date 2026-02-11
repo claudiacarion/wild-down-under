@@ -1,4 +1,5 @@
 import express from 'express';
+import 'dotenv/config';
 import homepageRoute from './routes/homepageRoutes.js';
 import mammalsRoute from './routes/mammalsRoute.js';
 import reptilesRoute from './routes/reptilesRoutes.js';
@@ -27,7 +28,7 @@ app.use((req, res) => {
   `)
 })
 
-const port = 8647;
+const port = process.env.PORT;
 app.listen(port, () => (
   console.log(`Listening on port ${port}..`)
 ));
