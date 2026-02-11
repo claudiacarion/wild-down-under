@@ -26,16 +26,14 @@ allAnimals.forEach(animal => {
 
 router.get('/',(req,res)=>{
   res.render(path.join(__dirname, "/views/pages/page"), {
-    groupArray: [birdsArray, mammalsArray, reptilesArray],
     allAnimalsArray: animalsByGroup
   })
 })
 
-router.get('/:slug', (req, res) => {
+router.get('/home/:slug', (req, res) => {
   const { slug } = req.params;
-  const groupArray = [birdsArray, mammalsArray, reptilesArray];
 
-  const selectedAnimal = groupArray.forEach(group => group.forEach(animal => animal.find(animal.slug === slug)));
+  const selectedAnimal = allAnimals.find(animal => animal.slug === slug)
 
   if (!selectedAnimal) {
     return res.status(404).send("Animal not found");
