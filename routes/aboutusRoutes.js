@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
     groupArray: teamArray,
     teamName: "Zoo Keepers",
     groupDescription: 
-    "Meet the zoo keepers: we wrangle wild ideas, feed big dreams, and somehow keep the whole ecosystem thriving. No tranquilizers needed—just teamwork and snacks."
+    "Meet the zoo keepers: we wrangle wild ideas, feed big dreams, and somehow keep the whole ecosystem thriving. No tranquilizers needed—just teamwork and snacks.",
+    teamArray: teamArray
   })
 });
 
