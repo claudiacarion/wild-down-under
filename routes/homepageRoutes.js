@@ -1,19 +1,40 @@
-import express from "express";
-import * as path from "path";
-import { birdsArray, mammalsArray, reptilesArray } from "../data/data.js";
+import express from 'express';
+import * as path from 'path';
+import { mammalsArray, reptilesArray, birdsArray } from '../data/data.js';
+import { log } from 'console';
 
 const router = express.Router();
 const __dirname = path.resolve();
 
-router.get("/", (req, res) => {
-  res.render(path.join(__dirname, "/views/pages/page"));
+const allAnimals = [
+  ...mammalsArray,
+  ...reptilesArray,
+  ...birdsArray,
+];
+
+const animalsByGroup = [];
+
+allAnimals.forEach(animal => {
+  let group = animalsByGroup.find(g => g.name === animal.group);
+
+  if (!group) {
+    group = { name: animal.group, animals: [] };
+    animalsByGroup.push(group);
+  }
+
+  group.animals.push(animal);
 });
 
-router.get("/:slug", (req, res) => {
-  const { slug } = req.params;
-  const groupArray = [birdsArray, mammalsArray, reptilesArray];
+router.get('/',(req,res)=>{
+  res.render(path.join(__dirname, "/views/pages/page"), {
+    allAnimalsArray: animalsByGroup
+  })
+})
 
-  const selectedAnimal = groupArray.forEach(group => group.forEach(animal => animal.find(animal.slug === slug)));
+router.get('/home/:slug', (req, res) => {
+  const { slug } = req.params;
+
+  const selectedAnimal = allAnimals.find(animal => animal.slug === slug)
 
   if (!selectedAnimal) {
     return res.status(404).send("Animal not found");
