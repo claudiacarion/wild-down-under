@@ -28,8 +28,7 @@ app.use((req, res) => {
   `)
 })
 
-const port = 1234;
-// const port = process.env.PORT;
+const port = process.env.PORT;
 app.listen(port, () => (
   console.log(`Listening on port ${port}..`)
 ));
