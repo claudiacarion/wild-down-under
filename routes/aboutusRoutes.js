@@ -6,6 +6,7 @@ import { teamArray } from '../data/data.js';
 const router = express.Router();
 const __dirname = path.resolve();
 
+
 router.get('/', (req, res) => {
   res.render(path.join(__dirname, "/views/pages/page"),
   {
@@ -13,7 +14,7 @@ router.get('/', (req, res) => {
     teamName: "Zoo Keepers",
     groupDescription: 
     "Meet the zoo keepers: we wrangle wild ideas, feed big dreams, and somehow keep the whole ecosystem thriving. No tranquilizers needed—just teamwork and snacks.",
-     team: teamArray
+     teamArray: teamArray
   })
 });
 
