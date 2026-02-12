@@ -166,6 +166,18 @@ h3 {
     padding: 16px;
   }
 
+  .main-container.home {
+    background-image: url(../images/Koala.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+  }
+
+  .main-description {
+    width: 60%;
+    padding-top: 32px;
+  }
+
   .sidebar.open {
     display: flex;
     width: 100%;

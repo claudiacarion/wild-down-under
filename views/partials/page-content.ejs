@@ -1,15 +1,15 @@
 <% if(locals.groupName) { %>
-    <div class="main-container">
+    <div class="main-container home">
       <h1 class="main-title"><%= groupName %></h1>
       <h3 class="main-description"><%= groupDescription %></h3>
     </div>
 <%} else if(locals.teamName) { %>
-  <div class="main-container team-container">
+  <div class="main-container team-container home">
     <h1 class="main-title"><%= teamName %></h1>
     <h3 class="main-description"><%= groupDescription %></h3>
   </div>
 <%} else {%>
-  <div class="main-container">
+  <div class="main-container home">
     <h1 class="main-title">Welcome to Wild Down Under!</h1>
     <h3 class="main-description">G’day and welcome! You’ve just stepped into our small but mighty Australian zoo — home to curious critters, friendly faces, and plenty of animal magic. Enjoy the adventure!</h3>
   </div>
