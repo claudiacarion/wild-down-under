@@ -1,3 +1,12 @@
+:root {
+  --primary: #baa9ca;
+  --secondary: #e2a630;
+  --tertiary: #41b1a6;
+  --quaternary: #ce6786;
+  --text:#2a2929;
+  --title:#ffffff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,14 +16,188 @@ html, body {
   margin: 0;
 }
 
+body {
+  font-family: "Quicksand";
+  display: flex;
+  flex-direction: column;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "Barrio";
+  margin: 0;
+}
+
+a {
+  color: var(--title);
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  background: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.logo-container {
+  width: 100px;
+}
+
+.logo-container img,
+.image-container img,
+.team-image {
+  width: 100%;
+}
+
+.team-image-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.sidebar__button-container {
+  background:var(--text);
+  text-align: center;
+}
+
+.sidebar__arrow {
+  background-color: var(--text);
+  color: var(--title);
+  border: none;
+}
+
 .sidebar{
   display: none;
 }
 
 .sidebar.open {
   display: block;
+  background-color: var(--text);
+  color: var(--title);
+  text-align: center;
+}
+
+.sidebar__ul  {
+  padding: 0;
+}
+
+.sidebar__ul li{
+  color: var(--title);
+  list-style: none;
+  list-style-position: inside;
+  padding-bottom: 8px;
+}
+
+.main-container {
+  padding: 16px;
+  background: var(--primary);
+  flex-grow: 1;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: var(--title);
+  margin-bottom: 16px ;
+  text-align: center;
+}
+
+.main-description {
+  font-size: 1.5rem;
+}
+
+.info-card {
+  text-align: center;
+  color: var(--title);
+}
+
+.team-social-container {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.team-social {
+  padding: 8px;
+}
+
+.group-link {
+  background-color:  var(--primary);
+  padding: 8px;
+  text-align: right;
+}
+
+.team-container {
+  background-color: var(--quaternary);
+}
+
+.footer {
+  background-color: var(--tertiary);
+  text-align: center;
+  padding: 16px;
+}
+
+.footer__socials {
+  margin: 4px;
+}
+
+.footer__icon {
+  padding: 8px;
+}
+
+.footer__address {
+  margin: 4px;
 }
 
 .animate {
   transform: rotate(180deg);
+}
+
+h3 {
+  margin: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-item {
+    padding: 16px;
+  }
+
+  .main-container.home {
+    background-image: url(../images/Koala.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+  }
+
+  .main-description {
+    width: 60%;
+    padding-top: 32px;
+  }
+
+  .sidebar.open {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 16px;
+  }
+
+  .sidebar-wrapper {
+    width: 30%;
+  }
+
+  .image-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .team-image-container {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+
 }

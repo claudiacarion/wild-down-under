@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Barrio";
+  src: url("../fonts/Barrio/Barrio-Regular.woff2") format("woff2"),
+    url("../fonts/Barrio/Barrio-Regular.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand/Quicksand-Regular.woff2") format("woff2"),
+    url("../fonts/Quicksand/Quicksand-Regular.woff") format("woff");
+  font-style: normal;
+}
