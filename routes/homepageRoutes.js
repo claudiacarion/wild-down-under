@@ -42,6 +42,8 @@ router.get('/home/:slug', (req, res) => {
   res.render(path.join(__dirname, "/views/pages/animals"), {
     allAnimals: "Zoo",
     homeAnimal: [selectedAnimal],
+    allAnimalsArray: animalsByGroup
+
   });
 });
 
