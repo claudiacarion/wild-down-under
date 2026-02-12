@@ -32,4 +32,19 @@ router.get('/', (req, res) => {
     })
 });
 
+router.get('/home/:slug', (req, res) => {
+  const { slug } = req.params;
+
+  const selectedAnimal = allAnimals.find(animal => animal.slug === slug)
+
+  if (!selectedAnimal) {
+    return res.status(404).send("Animal not found");
+  }
+
+  res.render(path.join(__dirname, "/views/pages/animals"), {
+    allAnimals: "Zoo",
+    homeAnimal: [selectedAnimal],
+  });
+});
+
 export default router;
