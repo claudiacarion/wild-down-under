@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
   {
     groupArray: reptilesArray,
     groupName: "Reptiles",
-    groupDescription: "Cold-blooded cool customers — masters of disguise, drama, and deep-sea chill."
+    groupDescription: "Cold-blooded cool customers — masters of disguise, drama, and deep-sea chill.",
+    animalArray: reptilesArray
   })
 });
 

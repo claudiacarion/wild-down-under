@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
   {
     groupArray: mammalsArray,
     groupName: "Mammals",
-    groupDescription: "Our mammals are quirky rule-breakers — eggs? Smiles? Screams? We've got the lot!"
+    groupDescription: "Our mammals are quirky rule-breakers — eggs? Smiles? Screams? We've got the lot!",
+    animalArray: mammalsArray
   })
 });
 
