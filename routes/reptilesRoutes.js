@@ -1,5 +1,5 @@
 import express from 'express';
-import * as path from "path";
+import * as path from 'path';
 import { reptilesArray } from '../data/data.js';
 
 const router = express.Router();
@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
   {
     groupArray: reptilesArray,
     groupName: "Reptiles",
-    groupDescription: "Cold-blooded cool customers — masters of disguise, drama, and deep-sea chill."
+    groupDescription: "Cold-blooded cool customers — masters of disguise, drama, and deep-sea chill.",
+    animalArray: reptilesArray
   })
 });
 
