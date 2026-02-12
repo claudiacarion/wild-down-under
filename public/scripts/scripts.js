@@ -10,5 +10,12 @@ arrowButton.addEventListener('click',()=>{
     sidebarContent.classList.add('open');
     arrowButton.classList.add('animate');
   }
+})
 
+const menuBtn = document.querySelector(`.menu-btn`);
+const nav = document.querySelector(`.nav`);
+
+menuBtn.addEventListener(`click`, () => {
+  nav.classList.toggle(`active`);
+  menuBtn.classList.toggle(`active`)
 })
