@@ -1,0 +1,55 @@
+<div>
+  <h2>Animals</h2>
+  <button class="sidebar__arrow">&#9662;</button>
+</div>
+<aside class="sidebar">
+
+  <% if (locals.animalArray) { %>
+    <h3>
+      <%= groupName %>
+    </h3>
+    <ul>
+      <% animalArray.forEach(animal=> { %>
+        <li>
+          <a href="/<%=animal.group.toLowerCase()%>/<%= animal.slug%>">
+            <%= animal.name %>
+          </a>
+        </li>
+        <% }) %>
+    </ul>
+    <% } %>
+
+      <% if (locals.teamArray) { %>
+        <h3>
+          <%= teamName %>
+        </h3>
+        <ul>
+          <% teamArray.forEach(member=> { %>
+            <li>
+              <a href="/aboutus/<%= member.slug%>">
+                <%= member.name %>
+              </a>
+            </li>
+            <% }) %>
+        </ul>
+        <% } %>
+
+          <% if (locals.allAnimalsArray) { %>
+            <ul>
+              <% allAnimalsArray.forEach(animal=> { %>
+                <h3>
+                  <%= animal.name %>
+                </h3>
+                <ul>
+                  <% animal.animals.forEach(a=>{%>
+                    <li>
+                      <a href="/home/<%= a.slug%>">
+                        <%= a.name %>
+                      </a>
+                    </li>
+                    <%}) %>
+                      <% }) %>
+                </ul>
+                <% } %>
+
+</aside>

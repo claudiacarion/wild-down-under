@@ -6,3 +6,15 @@ html, body {
   height: 100%;
   margin: 0;
 }
+
+.sidebar{
+  display: none;
+}
+
+.sidebar.open {
+  display: block;
+}
+
+.animate {
+  transform: rotate(180deg);
+}
