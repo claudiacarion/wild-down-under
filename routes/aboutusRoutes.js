@@ -28,7 +28,9 @@ router.get('/:slug', (req, res) => {
   res.render(path.join(__dirname, "/views/pages/animals"),
   {
     teamName: "Zoo Keepers",
-    team: [selectedMember]
+    team: [selectedMember],
+    teamArray:teamArray
+
   })
 })
 
