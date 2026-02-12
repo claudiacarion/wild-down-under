@@ -14,7 +14,7 @@
     </div>
     <img src="<%= animal.image %>" alt="<%= animal.name %>">
   </div>
-  <a href="<%= animal.group.toLowerCase() %>">Back to <%= animal.group %></a>
+  <a href="/<%= animal.group.toLowerCase() %>">Back to <%= animal.group %></a>
 <%})%>
 <%} else if(locals.teamName) { %>
   <% team.forEach(member => { %>
