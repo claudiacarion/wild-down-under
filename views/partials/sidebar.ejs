@@ -4,47 +4,53 @@
 <aside class="sidebar">
 
   <% if (locals.animalArray) { %>
-    <h3 class="sidebar__title">
-      <%= groupName %>
-    </h3>
-    <ul class="sidebar__ul">
-      <% animalArray.forEach(animal=> { %>
-        <li class="sidebar__li">
-          <a href="/<%=animal.group.toLowerCase()%>/<%= animal.slug%>">
-            <%= animal.name %>
-          </a>
-        </li>
+    <div class="sidebar-wrapper">
+      <h3 class="sidebar__title">
+        <%= groupName %>
+      </h3>
+      <ul class="sidebar__ul">
+        <% animalArray.forEach(animal=> { %>
+          <li class="sidebar__li">
+            <a href="/<%=animal.group.toLowerCase()%>/<%= animal.slug%>">
+              <%= animal.name %>
+            </a>
+          </li>
         <% }) %>
-    </ul>
+      </ul>
+    </div>
     <% } %>
 
       <% if (locals.teamArray) { %>
-        <h3 class="sidebar__title">
-          <%= teamName %>
-        </h3>
-        <ul class="sidebar__ul">
-          <% teamArray.forEach(member=> { %>
-            <li class="sidebar__li">
-              <a href="/aboutus/<%= member.slug%>">
-                <%= member.name %>
-              </a>
-            </li>
-            <% }) %>
-        </ul>
+        <div class="sidebar-wrapper">
+          <h3 class="sidebar__title">
+            <%= teamName %>
+          </h3>
+          <ul class="sidebar__ul">
+            <% teamArray.forEach(member=> { %>
+              <li class="sidebar__li">
+                <a href="/aboutus/<%= member.slug%>">
+                  <%= member.name %>
+                </a>
+              </li>
+              <% }) %>
+          </ul>
+        </div>
         <% } %>
             <% if (locals.allAnimalsArray) { %>
             <% allAnimalsArray.forEach(group=> { %>
-              <h3 class="sidebar__title">
-                <%= group.name %>
-              </h3>
-              <ul class="sidebar__ul">
-                <% group.animals.forEach(animal=> { %>
-                  <li class="sidebar__li">
-                    <a href="/home/<%= animal.slug %>">
-                      <%= animal.name %>
-                    </a>
-                  </li>
-                  <% }) %>
-              </ul>
+              <div class="sidebar-wrapper">
+                <h3 class="sidebar__title">
+                  <%= group.name %>
+                </h3>
+                <ul class="sidebar__ul">
+                  <% group.animals.forEach(animal=> { %>
+                    <li class="sidebar__li">
+                      <a href="/home/<%= animal.slug %>">
+                        <%= animal.name %>
+                      </a>
+                    </li>
+                    <% }) %>
+                </ul>
+              </div>
               <% })} %>
 </aside>

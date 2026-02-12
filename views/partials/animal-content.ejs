@@ -1,46 +1,55 @@
 <% if(locals.groupName) { %>
   <% animals.forEach(animal => { %>
-    <div class="info-card">
-      <h1 class="info__title"><%= animal.name %></h1>
-      <h3 class="info__subtitle"><%= animal.group %></h3>
-    </div>
-    <div class="info-container">
-      <div class="image-container">
-        <img src="<%= animal.image %>" alt="<%= animal.name %>" class="animal-image">
+    <div class="main-container">
+      <div class="info-card">
+        <h1 class="info__title"><%= animal.name %></h1>
+        <h3 class="info__subtitle"><%= animal.group %></h3>
       </div>
-      <p class="info-text"><%= animal.description %></p>
-      <p class="info-text">Diet: <%= animal.diet %></p>
-      <p class="info-text">Lifespan: <%= animal.lifespan %></p>
-      <p class="info-text">Location: <%= animal.location %></p>
-      <p class="info-text">Length: <%= animal.length %></p>
-      <p class="info-text">Weight: <%= animal.weight %></p>
+      <div class="info-container">
+        <div class="image-container">
+          <img src="<%= animal.image %>" alt="<%= animal.name %>" class="animal-image">
+        </div>
+        <p class="info-text"><%= animal.description %></p>
+        <p class="info-text">Diet: <%= animal.diet %></p>
+        <p class="info-text">Lifespan: <%= animal.lifespan %></p>
+        <p class="info-text">Location: <%= animal.location %></p>
+        <p class="info-text">Length: <%= animal.length %></p>
+        <p class="info-text">Weight: <%= animal.weight %></p>
+      </div>
     </div>
   <a href="/<%= animal.group.toLowerCase() %>" class="group-link">Back to <%= animal.group %></a>
 <%})%>
 <%} else if(locals.teamName) { %>
   <% team.forEach(member => { %>
-    <div class="info-card">
-      <h1 class="info__title"><%= member.name %></h1>
-    </div>
-    <div class="info-container">
-      <div class="image-container">
-        <img src="<%= member.image %>" alt="<%= member.name %>" class="animal-image">
+    <div class="main-container team-container">
+      <div class="info-card">
+        <h1 class="info__title"><%= member.name %></h1>
       </div>
-      <p class="info-text">Ability: <%= member.specialAbility %></p>
-      <p class="info-text">Habitat: <%= member.habitat %></p>
-      <a href="<%= member.github %>" target="_blank" class="team-social"><i class="fa-brands fa-github"></i></a>
-      <a href="<%= member.linkedIn %>" target="_blank" class="team-social"><i class="fa-brands fa-square-linkedin"></i></a>
+      <div class="info-container">
+        <div class="team-image-container">
+          <img src="<%= member.image %>" alt="<%= member.name %>" class="team-image">
+        </div>
+        <p class="info-text">Ability: <%= member.specialAbility %></p>
+        <p class="info-text">Habitat: <%= member.habitat %></p>
+        <div class="team-social-container">
+          <a href="<%= member.github %>" target="_blank" class="team-social"><i class="fa-brands fa-github"></i></a>
+          <a href="<%= member.linkedIn %>" target="_blank" class="team-social"><i class="fa-brands fa-square-linkedin"></i></a>
+        </div>
+      </div>
     </div>
-    <a href="/aboutus" class="group-link">Back to About Us</a>
+    <a href="/aboutus" class="group-link team-container">Back to About Us</a>
   <%})%>
 <%} else if(locals.allAnimals) { %>
   <% homeAnimal.forEach(animal => { %>
-    <div class="info-card">
-      <h1 class="info__title"><%= animal.name %></h1>
-    </div>
-    <div class="info-container">
-      <div class="image-container">
-        <img src="<%= animal.image %>" alt="<%= animal.name %>" class="animal-image">
+    <div class="main-container">
+      <div class="info-card">
+        <h1 class="info__title"><%= animal.name %></h1>
+        <h3 class="info__subtitle"><%= animal.group %></h3>
+      </div>
+      <div class="info-container">
+        <div class="image-container">
+          <img src="<%= animal.image %>" alt="<%= animal.name %>" class="animal-image">
+        </div>
       </div>
     </div>
     <a href="/" class="group-link">Back to Home</a>
