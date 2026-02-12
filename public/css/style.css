@@ -64,6 +64,8 @@ a {
   background-color: var(--text);
   color: var(--title);
   border: none;
+  font-size: 2rem;
+  width: 100%;
 }
 
 .sidebar{
@@ -157,6 +159,11 @@ h3 {
 
 
 @media screen and (min-width: 768px) {
+  a:hover,
+  .sidebar__arrow {
+    cursor: pointer;
+  }
+
   .nav {
     display: flex;
     justify-content: space-between;
