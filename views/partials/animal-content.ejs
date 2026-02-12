@@ -14,6 +14,7 @@
     </div>
     <img src="<%= animal.image %>" alt="<%= animal.name %>">
   </div>
+  <a href="<%= animal.group.toLowerCase() %>">Back to <%= animal.group %></a>
 <%})%>
 <%} else if(locals.teamName) { %>
   <% team.forEach(member => { %>
@@ -27,6 +28,7 @@
       <a href="<%= member.github %>" target="_blank"><i class="fa-brands fa-github"></i></a>
       <a href="<%= member.linkedIn %>" target="_blank"><i class="fa-brands fa-square-linkedin"></i></a>
     </div>
+    <a href="/aboutus">Back to Team</a>
   <%})%>
 <%} else if(locals.allAnimals) { %>
   <% homeAnimal.forEach(animal => { %>
@@ -35,7 +37,7 @@
     </div>
     <div>
       <img src="<%= animal.image %>" alt="<%= animal.name %>">
-      <a href="<%= animal.group.toLowerCase() %>" target="_blank">Go to the <%= animal.group %> page!</a>
     </div>
+    <a href="/">Back to Home</a>
   <%})%>
 <%}%>
