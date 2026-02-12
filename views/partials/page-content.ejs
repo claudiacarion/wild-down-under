@@ -1,16 +1,16 @@
 <% if(locals.groupName) { %>
-    <div>
-      <h2><%= groupName %></h2>
-      <h3><%= groupDescription %></h3>
+    <div class="main-container">
+      <h1 class="main-title"><%= groupName %></h1>
+      <h3 class="main-description"><%= groupDescription %></h3>
     </div>
 <%} else if(locals.teamName) { %>
-  <div>
-    <h2><%= teamName %></h2>
-    <h3><%= groupDescription %></h3>
+  <div class="main-container">
+    <h1 class="main-title"><%= teamName %></h1>
+    <h3 class="main-description"><%= groupDescription %></h3>
   </div>
 <%} else {%>
-  <div>
-    <h2>Welcome to our zoo!</h2>
-    <h3>G’day and welcome! You’ve just stepped into our small but mighty Australian zoo — home to curious critters, friendly faces, and plenty of animal magic. Enjoy the adventure!</h3>
+  <div class="main-container"></div>
+    <h1 class="main-title">Welcome to Wild Down Under!</h1>
+    <h3 class="main-description">G’day and welcome! You’ve just stepped into our small but mighty Australian zoo — home to curious critters, friendly faces, and plenty of animal magic. Enjoy the adventure!</h3>
   </div>
 <%}%>
